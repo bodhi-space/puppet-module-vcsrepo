@@ -3,8 +3,8 @@
 class vcsrepo {
 
   $defaults = {
-    'ensure'    => present,
-    'provider'  => git,
+    ensure    => present,
+    provider  => git,
   }
   $repos = hiera_hash('vcsrepo', {})
   validate_hash ( $repos )
